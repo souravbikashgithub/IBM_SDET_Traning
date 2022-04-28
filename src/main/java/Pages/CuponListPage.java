@@ -38,6 +38,11 @@ public class CuponListPage {
 	
 	@FindBy(css=".fa-save")
 	public WebElement SaveButton;
+	
+	@FindBys(@FindBy(css=".pagination li"))
+	public List<WebElement> pagenition;
+	
+	
 	/*
 	 * 
 	 * Functions
@@ -55,6 +60,24 @@ public class CuponListPage {
 				System.out.println("Click on Edit Button Successful!!");
 				break;
 				
+			}
+			
+			while(i==totalRow.size()) {
+				
+				
+for(int j=1;j<=pagenition.size();j++) {
+	
+					try {
+						System.out.println("Pagenation Character:"+driver.findElement(By.xpath("//*[@class='panel-body']/div/div[1]/ul/li["+ j +"]/a")).getText());
+					if(driver.findElement(By.xpath("//*[@class='panel-body']/div/div[1]/ul/li["+ j +"]/a")).getText().contentEquals(">")) {
+						
+						driver.findElement(By.xpath("//*[@class='panel-body']/div/div[1]/ul/li["+ j +"]/a")).click();
+						com.SleepinSeconds(4);
+						
+						FindtheCuponNameFromListAndClickEdit(CuponName);
+					}}
+	catch(Exception e) {}
+				}
 			}
 			
 		}

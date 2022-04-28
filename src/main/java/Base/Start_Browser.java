@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Start_Browser {
 	
 	
-	public static WebDriver Open_Browser() {
+	public static  WebDriver Open_Browser() {
 		
 		System.setProperty("webdriver.chrome.driver",".//ChromeDriver//chromedriver.exe");
 		

@@ -8,13 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/Features"
-		,glue={"StepDefinitions"},
-		tags = "@E2E_flow"
+		,glue={"StepDefinitions"}
 		)
 
 public class CucumberRunner {
 	
-	
-	
-
-}
+	}

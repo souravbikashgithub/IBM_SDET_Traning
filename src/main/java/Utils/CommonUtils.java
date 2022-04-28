@@ -2,7 +2,7 @@ package Utils;
 
 public class CommonUtils {
 	
-	public void SleepinSeconds(int Seconds) throws InterruptedException {
+	public static void SleepinSeconds(int Seconds) throws InterruptedException {
 		
 		int val=Seconds*1000;
 		
